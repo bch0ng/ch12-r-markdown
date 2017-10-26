@@ -10,6 +10,9 @@ library(jsonlite)
 library(dplyr)
 library(httr)
 
+# Read in API keys
+source('./api-keys.R')
+
 # Source in analysis file
 source('./analysis.R')
 ```

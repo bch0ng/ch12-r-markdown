@@ -6,12 +6,11 @@ movie <- 'Almost Famous'
 GetReview <- function(movie) {
   
   # Construct a search query using YOUR api key
-  # The base URL is https://api.nytimes.com/svc/movies/v2/reviews/search.json?
+  # The base URL is https://api.nytimes.com/svc/movies/v2/reviews/search.json
   # Your parameters should include a "query" and an "api_key"
   # Note: the HTTR library will take care of spaces in the arguments
   # See the interactive console for more detail:https://developer.nytimes.com/movie_reviews_v2.json#/Console/GET/reviews/search.json
-  base.url <- 'https://api.nytimes.com/svc/movies/v2/reviews/search.json?'
-  api.key <- "2d3963db35bb4d0f88f17a193b8c62e8"
+  base.url <- 'https://api.nytimes.com/svc/movies/v2/reviews/search.json'
   query.params <- list(query=movie, api_key = api.key)
   response <- GET(base.url, query = query.params)
   body <- content(response, "text")
