@@ -11,8 +11,14 @@ library(dplyr)
 library(httr)
 
 # Read in API keys
-
+source("api-keys.R")
 
 # Source in analysis file
+source("analysis.R")
 
 ```
+# `r movie`
+## `r movie.info$headline`
+> `r movie.info$summary`
+
+Follow [this link]('r movie.info$link') to read the full review.
